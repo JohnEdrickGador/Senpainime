@@ -1,0 +1,41 @@
+.scroll-gallery {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* border: 1px solid green; */
+    animation: 0.7s ease-in-out fadeIn;
+}
+
+.scroll-gallery::-webkit-scrollbar {
+    width: 0;
+}
+
+.character-card {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 225px;
+    height: auto;
+    text-align: center;
+    font-family: var(--regularFont);
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    animation: 0.7s ease-in-out fadeIn;
+    transition: 0.2s all ease-in-out;
+}
+
+.character-card img {
+    object-fit: cover;
+    display: block;
+    /* border: 1px solid green; */
+    border-radius: 20px 20px 0px 0px;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}

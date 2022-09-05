@@ -8,7 +8,7 @@
     --headerFont: 'Bebas Neue', cursive;
     --regularFont: 'Poppins', sans-serif;
     --headerSize: 30px;
-    --regularSize: 20px;
+    --regularSize: 0.8rem;
 }
 
 * {

@@ -47,6 +47,7 @@
     border-radius: 20px;
     animation: 0.7s ease-in-out fadeIn;
     transition: 0.2s all ease-in-out;
+    cursor: pointer;
 }
 
 .card img {
