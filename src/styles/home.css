@@ -1,0 +1,9 @@
+.recommendations {
+    margin: 10px
+}
+.recommendations > p {
+    font-family: var(--headerFont);
+    font-size: 25px;
+    color: white;
+    border-bottom: 1px solid white;
+}

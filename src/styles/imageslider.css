@@ -150,3 +150,9 @@
     right: 10px;
     transform: translateY(-60%);
   }
+
+  @media (max-width: 800px) {
+    .slider-container {
+        display: none;
+    }
+}
