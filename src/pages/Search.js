@@ -7,6 +7,9 @@ import CardsContainer from '../components/CardsContainer';
 function Search() {
   const params = useParams();
   const [searchResults, setSearchResults] = useState([]);
+  const sleep = ms => new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
   //search Anime
   const searchAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v4/anime?letter=${params.queryString}&&limit=10&&type=TV,movie`)
@@ -19,7 +22,7 @@ function Search() {
     searchAnime();
   },[])
 
-  console.log(params.queryString)
+  sleep(3000)
   return (
     <div className='search-page'>
         <Navbar />

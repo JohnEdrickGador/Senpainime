@@ -5,6 +5,8 @@ import './styles/navbar.css';
 import './styles/imageslider.css';
 import './styles/search.css';
 import './styles/home.css';
+import './styles/animeprofile.css';
+import './styles/scrollgallery.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
