@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import ImageSlider from "../components/ImageSlider";
 import CardsContainer from "../components/CardsContainer";
-import { MostPopular } from "../types/types";
+import { AnimeList } from "../types/types";
 // import { Navigate, useNavigate } from 'react-router-dom';
 
 function Home() {
   const [loading, setLoading] = useState(false);
-  const [mostPopular, setMostPopular] = useState<MostPopular | null>(null);
+  const [mostPopular, setMostPopular] = useState<AnimeList | null>(null);
 
-  const mapMostPopular = (api: MostPopular): MostPopular => {
+  const mapMostPopular = (api: AnimeList): AnimeList => {
     return {
       data: api.data,
     };
@@ -19,7 +18,7 @@ function Home() {
     const response = await fetch(
       `https://api.jikan.moe/v4/top/anime?limit=10&&type=movie&&filter=bypopularity`,
     );
-    const raw: MostPopular = await response.json();
+    const raw: AnimeList = await response.json();
     const mostPopularAnimes = mapMostPopular(raw);
     setMostPopular(mostPopularAnimes);
     setLoading(false);

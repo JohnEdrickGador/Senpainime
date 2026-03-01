@@ -3,7 +3,7 @@ import React from "react";
 import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Search from "./pages/Search";
-// import AnimeProfile from "./pages/AnimeProfile";
+import AnimeProfile from "./pages/AnimeProfile";
 function App() {
   return (
     <div className="App">
@@ -14,7 +14,7 @@ function App() {
           {/* search */}
           {/* <Route path="search/:queryString" element={<Search />} /> */}
           {/* anime profile */}
-          {/* <Route path="anime/:animeId" element={<AnimeProfile />} /> */}
+          <Route path="anime/:animeId" element={<AnimeProfile />} />
         </Routes>
       </BrowserRouter>
     </div>
