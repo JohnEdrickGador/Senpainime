@@ -12,13 +12,13 @@ function Navbar() {
     console.log(toggleMenu);
   };
 
-  const searchHandler = (e) => {
+  const searchHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     navigate(`/search/${searchInput}`);
     window.location.reload();
   };
 
-  const changeHandler = (e) => {
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setSearchInput(e.target.value);
   };
@@ -51,15 +51,6 @@ function Navbar() {
           ></input>
         </form>
       </div>
-      {/* <div className="navigation-links">
-      
-      {(toggleMenu || screenWidth > 800) && ( 
-          <ul>
-              <li><a href="/">Credits</a></li>
-              <li><a href="/about">About Me</a></li>
-          </ul>
-        )}
-        </div> */}
     </nav>
   );
 }
